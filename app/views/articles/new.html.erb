@@ -1,5 +1,14 @@
 <h1>New Article</h1>
 
+<% if @article.errors.any? %>
+  <% @article.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= msg %>
+        </div>
+  <% end %>
+<% end %>
+
 <%= form_for @article do |f| %>
   <div>
     <%=	 f.label :title %> <br />
@@ -10,7 +19,7 @@
     <%= f.text_area :description %>
   </div>
   <div>
-    <%= f.submit('Submit') %>
+    <%= f.submit 'Submit', :class => 'btn btn-success' %>
   </div>
 
 <% end %>

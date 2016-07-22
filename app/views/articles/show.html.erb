@@ -3,3 +3,5 @@
 </div>
 <div>Posted on: <%= @article.created_at.to_s(:long) %></div>
 <div><%= @article.description %></div>
+<%= link_to 'Edit', edit_article_path, :class => 'btn btn-info' %>
+<%= link_to 'Back', articles_path, :class => 'btn btn-default' %>

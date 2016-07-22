@@ -1,4 +1,6 @@
-<h1>New Article</h1>
+<div class="page-header">
+  <h1>New Article</h1>
+</div>
 
 <% if @article.errors.any? %>
   <% @article.errors.full_messages.each do |msg| %>
@@ -20,6 +22,8 @@
   </div>
   <div>
     <%= f.submit 'Submit', :class => 'btn btn-success' %>
+    <%= link_to 'Cancel', articles_path, :class => 'btn btn-default' %>
   </div>
+
 
 <% end %>

@@ -9,12 +9,7 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-info alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <%= msg %>
-      </div>
-    <% end %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>

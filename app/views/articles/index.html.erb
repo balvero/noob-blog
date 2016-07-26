@@ -10,7 +10,7 @@
       <h2><%= link_to article.title, article_path(article) %></h2>
       <div class="meta">Posted on: <span><%= article.created_at.to_s(:long) %></span></div>
       <div class="summary">
-        <%= article.description %>
+        <%=h truncate(article.body, :length => 100) %>
       </div>
       <div class="actions">
         <%= link_to 'Edit', edit_article_path(article), :class => 'btn-sm btn-info' %>

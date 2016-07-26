@@ -7,8 +7,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
+    <%= render 'layouts/navigation' %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

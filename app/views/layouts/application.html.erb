@@ -9,8 +9,8 @@
 
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
     <%= render 'layouts/navigation' %>
-    <div class="container">
+    <%= render 'layouts/messages' %>
       <%= yield %>
-    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

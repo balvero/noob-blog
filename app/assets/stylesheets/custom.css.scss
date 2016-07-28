@@ -1,19 +1,30 @@
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Francois+One);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,700,400italic,700italic);
 
 body {
   margin-top: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif !important;
   font-size: 1.6em;
   line-height: 150%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   :hover {
     text-decoration: none;
   }
+}
+
+.navbar {
+  background-color: #ecf0f1;
+  a {
+    color: #525252;
+  }
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #95a5a6;
+  color: #fff;
 }
 
 .page-header {
@@ -21,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   h1 {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 100;
   }
 }
 
@@ -29,4 +41,70 @@ h1, h2, h3, h4, h5, h6 {
   .alert {
     margin-top: 15px;
   }
+}
+
+.actions a:hover {
+  text-decoration: none;
+}
+
+// blog index
+
+.article {
+  h2 {
+    margin-bottom: 0;
+    a {
+      font-weight: 200;
+      color: #34495e;
+    }
+  }
+}
+
+.meta {
+  font-size: 13px;
+  span {
+    font-style: italic;
+  }
+}
+
+
+#footer {
+  background-color: #2C3E50;
+  color: #fff !important;
+  margin-top: 45px;
+  padding: 30px 0;
+}
+
+
+// button colors override
+
+.btn {
+  box-shadow: -2px -2px 0px rgba(0,0,0,0.1) inset;
+  border: none;
+}
+
+.btn-info {
+  background-color: #3498db;
+}
+
+.btn-default {
+  background-color: #ecf0f1;
+}
+
+.btn-success {
+  background-color: #1abc9c;
+}
+
+.btn-success:hover {
+  background-color: #16a085;
+}
+
+// form style
+.form-control {
+  border: 1px solid #ddd;
+  box-shadow: none;
+}
+
+//Utilities
+.center {
+  text-align: center;
 }

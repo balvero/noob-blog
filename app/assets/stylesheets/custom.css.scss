@@ -1,31 +1,48 @@
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic);
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 body {
   margin-top: 50px;
-  font-family: 'Roboto Condensed', sans-serif !important;
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 1.6em;
   line-height: 150%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Francois One', sans-serif;
   :hover {
     text-decoration: none;
   }
 }
 
-.navbar {
-  background-color: #ecf0f1;
-  a {
-    color: #525252;
+// navbar
+
+.navbar-inverse {
+  background-color: rgba(0,0,0,.75);
+  border-color: rgba(0,0,0,.75);
+
+  .navbar-brand {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+  }
+
+  .navbar-toggle {
+    border: none;
+  }
+
+  .nav > li > a {
+    color: #ccc;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgba(0,0,0,.30);
+    color: #fff;
   }
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
-  background-color: #95a5a6;
-  color: #fff;
-}
 
 .page-header {
   margin-top: 15px;
@@ -33,6 +50,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 100;
+    color: #525252;
+    font-size: 2em;
   }
 }
 
@@ -47,14 +66,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.jumbotron {
+  background-color: rgba(0,0,0,0.20);
+}
+
 // blog index
 
 .article {
   h2 {
     margin-bottom: 0;
+    font-size: 1.6em;
     a {
       font-weight: 200;
-      color: #34495e;
+      color: #525252;
     }
   }
 }
@@ -71,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #2C3E50;
   color: #fff !important;
   margin-top: 45px;
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 
@@ -106,5 +130,11 @@ h1, h2, h3, h4, h5, h6 {
 
 //Utilities
 .center {
+  text-align: center;
+}
+
+
+// mobile
+#mobile-menu {
   text-align: center;
 }

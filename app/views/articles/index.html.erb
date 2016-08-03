@@ -8,7 +8,7 @@
   <% @articles.each do |article| %>
     <div class="article">
       <h2><%= link_to article.title, article_path(article) %></h2>
-      <div class="meta">Posted: <span><%= time_ago_in_words(article.created_at) %> ago</span></div>
+      <div class="meta">Posted by: <span><%= article.user.username %></span> <span><%= time_ago_in_words(article.created_at) %> ago</span>.</div>
       <div class="summary">
         <%= truncate(article.body, escape: false, length: 100 ) %>
       </div>

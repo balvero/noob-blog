@@ -1,24 +1,10 @@
 <div class="container">
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-12">
   <div class="page-header">
     <h1>All Articles</h1>
   </div>
-    <div class="article-list ">
-  <% @articles.each do |article| %>
-    <div class="article">
-      <h2><%= link_to article.title, article_path(article) %></h2>
-      <div class="meta">Posted by: <span><%= article.user.username %></span> <span><%= time_ago_in_words(article.created_at) %> ago</span>.</div>
-      <div class="summary">
-        <%= truncate(article.body, escape: false, length: 100 ) %>
-      </div>
-      <div class="actions">
-        <%= link_to 'Edit', edit_article_path(article), :class => 'btn-xs btn-info' %>
-        <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn-xs btn-danger' %>
-      </div>
-    </div>
-  <% end %>
-  </div>
+  <%= render 'article', obj: @articles %>
 </div><!-- .col-md-8 -->
 
 </div>

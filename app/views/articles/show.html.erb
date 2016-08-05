@@ -5,6 +5,8 @@
   <div class="meta">Posted by: <span><%= link_to @article.user.username, user_path(@article.user), :class => 'username' %></span> <br /> <%= @article.created_at.to_s(:long) %></div>
   <div><%= simple_format(@article.body) %></div>
   <div class="meta"><span>Last updated: <%= time_ago_in_words(@article.created_at) %> ago </span></div>
+  <% if logged_in? %>
   <%= link_to 'Edit', edit_article_path, :class => 'btn btn-info' %>
   <%= link_to 'Back', articles_path, :class => 'btn btn-default' %>
+  <% end %>
 </div>

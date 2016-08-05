@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="page-header">
+    <h1>All Users</h1>
+  </div>
+    <div class="users-list">
+      <% @users.each do |user| %>
+      <div class="user">
+        <%= link_to gravatar_for(user, size: 48), user_path(user), :class => 'gravatar' %>
+        <p class="username"><%= link_to user.username, user_path(user) %></p>
+        <%= pluralize(user.articles.count, 'article') if user.articles %>
+      </div>
+          <hr >
+        <% end %>
+    </div>
+
+</div>

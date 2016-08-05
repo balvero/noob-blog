@@ -62,8 +62,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.actions a:hover {
-  text-decoration: none;
+.actions a:hover, a {
+  text-decoration: none !important;
 }
 
 .jumbotron {
@@ -131,6 +131,24 @@ h1, h2, h3, h4, h5, h6 {
 //Utilities
 .center {
   text-align: center;
+}
+
+
+// User index
+.user .gravatar {
+  display: block;
+}
+
+.user p.username {
+  margin-bottom: 0;
+  margin-top: 15px;
+  padding-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.meta .username {
+  font-family: 'Francois One', sans-serif;
 }
 
 

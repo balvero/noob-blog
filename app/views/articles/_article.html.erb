@@ -6,7 +6,7 @@
         <div class="summary">
           <%= truncate(article.body, escape: false, length: 100 ) %>
         </div>
-        <% if logged_in? && current_user == article.user %>
+        <% if logged_in? && (current_user == article.user || current_user.admin? )%>
         <div class="actions">
           <%= link_to 'Edit', edit_article_path(article), :class => 'btn-xs btn-info' %>
           <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn-xs btn-danger' %>

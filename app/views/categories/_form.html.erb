@@ -1,0 +1,9 @@
+<%= render 'shared/errors', obj: @category %>
+
+<%= simple_form_for @category do |f| %>
+
+    <%= f.input :name, placeholder: 'Category Name' %>
+    <%= f.submit 'Submit', :class => 'btn btn-success' %>
+    <%= link_to 'Cancel', categories_path, :class => 'btn btn-default' %>
+
+<% end %>

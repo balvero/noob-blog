@@ -70,6 +70,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0,0,0,0.20);
 }
 
+
+
 // blog index
 
 .article {
@@ -88,8 +90,21 @@ h1, h2, h3, h4, h5, h6 {
   span {
     font-style: italic;
   }
+
 }
 
+.category a {
+  padding: 1px 4px;
+  background-color: #f6f6f6;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin: 0 2px;
+  font-size: 11px;
+}
+
+.category a:first-child {
+  margin-left: 0;
+}
 
 #footer {
   background-color: #2C3E50;

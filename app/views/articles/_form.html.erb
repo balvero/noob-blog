@@ -4,6 +4,8 @@
 
       <%= f.input :title %>
       <%= f.input :body %>
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+      <br />
       <%= f.submit 'Submit', :class => 'btn btn-success' %>
       <%= link_to 'Cancel', articles_path, :class => 'btn btn-default' %>
 

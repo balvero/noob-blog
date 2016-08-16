@@ -6,6 +6,11 @@
         <div class="summary">
           <%= truncate(article.body, escape: false, length: 100 ) %>
         </div>
+        <% if article.categories.any? %>
+            <div class="meta category">Categories:
+              <%= render article.categories %>
+            </div>
+        <% end %>
         <% if logged_in? && (current_user == article.user || current_user.admin? )%>
         <div class="actions">
           <%= link_to 'Edit', edit_article_path(article), :class => 'btn-xs btn-info' %>
